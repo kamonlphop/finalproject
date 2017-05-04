@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".register"></activity>
+        <activity android:name=".register" />
+        <activity
+            android:name=".ebook"
+            android:label="@string/title_activity_ebook"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

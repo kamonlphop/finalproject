@@ -7,4 +7,5 @@
     <string name="forget">forgot?</string>
     <string name="register">Donot have a account?</string>
     <string name="haveregister">Have an account?Login</string>
+    <string name="title_activity_ebook">ebook</string>
 </resources>
