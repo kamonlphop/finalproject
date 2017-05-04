@@ -6,5 +6,6 @@
     <color name="white">#ffffff</color>
     <color name="www">#0066cc</color>
     <color name="button">#333366</color>
-
+    <color name="ColorPrimary">#FF5722</color>
+    <color name="ColorPrimaryDark">#E64A19</color>
 </resources>

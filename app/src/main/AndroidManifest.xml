@@ -17,10 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".register" />
-        <activity
-            android:name=".ebook"
-            android:label="@string/title_activity_ebook"
-            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".Main2Activity" />
     </application>
 
 </manifest>

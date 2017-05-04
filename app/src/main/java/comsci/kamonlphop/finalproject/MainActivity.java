@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
     public void clickregister(View view){
         Intent intent = new Intent(MainActivity.this,register.class);
         startActivity(intent);
+    }
+
+
+    public void clicklogin(View view){
+        Intent intent = new Intent(MainActivity.this,ebook.class);
+        startActivity(intent);
 
     }//end
 

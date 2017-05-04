@@ -103,6 +103,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/button_login_from"
         android:backgroundTint="@color/button"
+        android:onClick="onClicklo"
         android:text="Confirm"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
