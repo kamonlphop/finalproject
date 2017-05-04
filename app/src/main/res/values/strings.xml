@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">finalproject</string>
+    <string name="login">Login</string>
+    <string name="registername">register</string>
+    <string name="nameproject">E-Book Computer Science</string>
+    <string name="cancle">Cancle</string>
+    <string name="forget">forgot?</string>
+    <string name="register">Donot have a account?</string>
+    <string name="haveregister">Have an account?Login</string>
+</resources>
