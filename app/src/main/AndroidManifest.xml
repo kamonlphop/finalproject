@@ -17,8 +17,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".register" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".ebookhome"></activity>
+        <activity android:name=".ebookhome" />
+        <activity android:name=".tab1" />
+        <activity android:name=".tap2" />
+        <activity android:name=".tap3" />
+        <activity
+            android:name=".MyEbook"
+            android:label="@string/title_activity_tapconten"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

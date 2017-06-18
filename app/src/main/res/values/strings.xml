@@ -8,4 +8,9 @@
     <string name="register">Donot have a account?</string>
     <string name="haveregister">Have an account?Login</string>
     <string name="title_activity_ebook">ebook</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_tabbbb">tabbbb</string>
+    <string name="title_activity_tapconten">My E-Book</string>
 </resources>

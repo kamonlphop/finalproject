@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         try{
             String[] strMyResult = objStudentTABLE.searchUserpassword(usernameString);
             if (passwordString.equals(strMyResult[3])){
-                Intent intent = new Intent(MainActivity.this,ebookhome.class);
+                Intent intent = new Intent(MainActivity.this,MyEbook.class);
                 startActivity(intent);
                 //passwordtrue
                 Toast.makeText(getApplicationContext(),"ยินตอนรับเข้าสู้ระบบ",Toast.LENGTH_SHORT).show();
