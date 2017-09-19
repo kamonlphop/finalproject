@@ -22,42 +22,38 @@ class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
     public static final String DataBase_Name = "Ebookcomscitest6.db";
     public static final int DataBase_Version = 1;
-
+    // student
     public static final String TABLE = "Student";
-    public static final String ID_STUDENT = BaseColumns._ID;
-    public static final String NAME_STUDENT = "Name";
-    public static final String LASTNAME_STUDENT = "Lastname";
-    public static final String PASSWOD_STUDENT ="Password";
-    public static final String EMAIL_STUDENT = "Email";
-    public String CREATE_STUDENT ="create table "+TABLE+" ("+ID_STUDENT+" integer primary key autoincrement, "+NAME_STUDENT+" text, "+LASTNAME_STUDENT+" text, "+PASSWOD_STUDENT+" text, "+EMAIL_STUDENT+" text);";
+    public static final String ID_STUDENT = "ID_Student";
+    public static final String NAME_STUDENT = "Name_Student";
+    public static final String LASTNAME_STUDENT = "Lastname_Student";
+    public static final String PASSWOD_STUDENT ="Password_Student";
+    public static final String EMAIL_STUDENT = "Email_Student";
+    public String CREATE_STUDENT ="create table "+TABLE+" ("+ID_STUDENT+" text primary key , "+NAME_STUDENT+" text, "+LASTNAME_STUDENT+" text, "+PASSWOD_STUDENT+" text, "+EMAIL_STUDENT+" text);";
 
     public static final String TABLE_B = "Teacher";
-    public static final String ID_TEACHER = BaseColumns._ID;
-    public static final String NAME_TEACHER= "Name";
-    public static final String LASTNAME_TEACHER = "Lastname";
-    public static final String PASSWOD_TEACHER ="Password";
-    public static final String EMAIL_TEACHER= "Email";
-    public String CREATE_TEACHER ="create table "+TABLE_B+" ("+ID_TEACHER+" integer primary key autoincrement, "+NAME_TEACHER+" text, "+LASTNAME_TEACHER+" text, "+PASSWOD_TEACHER+" text, "+EMAIL_TEACHER+" text);";
+    public static final String ID_TEACHER = "ID_Teacher";
+    public static final String NAME_TEACHER= "Name_Teacher";
+    public static final String LASTNAME_TEACHER = "Lastname_Teacher";
+    public static final String PASSWOD_TEACHER ="Password_Teacher";
+    public static final String EMAIL_TEACHER= "Email_Teacher";
+    public String CREATE_TEACHER ="create table "+TABLE_B+" ("+ID_TEACHER+" text primary key , "+NAME_TEACHER+" text, "+LASTNAME_TEACHER+" text, "+PASSWOD_TEACHER+" text, "+EMAIL_TEACHER+" text);";
 
-    public static final String TABLE_C = "Admin";
-    public static final String ID_ADMIN = BaseColumns._ID;
-    public static final String NAME_ADMIN= "Name";
-    public static final String LASTNAME_ADMIN = "Lastname";
-    public static final String PASSWOD_ADMIN="Password";
-    public static final String EMAIL_ADMIN= "Email";
-    public String CREATE_ADMIN ="create table "+TABLE_C+" ("+ID_ADMIN+" integer primary key autoincrement, "+NAME_ADMIN+" text, "+LASTNAME_ADMIN+" text, "+PASSWOD_ADMIN+" text, "+EMAIL_ADMIN+" text);";
+    public static final String TABLE_C = "admin";
+    public static final String ID_ADMIN = "ID_Admin";
+    public static final String NAME_ADMIN= "Name_Admin";
+    public static final String LASTNAME_ADMIN = "Lastname_Admin";
+    public static final String PASSWOD_ADMIN="Password_Admin";
+    public static final String EMAIL_ADMIN= "Email_Admin";
+    public String CREATE_ADMIN ="create table "+TABLE_C+" ("+ID_ADMIN+" text primary key , "+NAME_ADMIN+" text, "+LASTNAME_ADMIN+" text, "+PASSWOD_ADMIN+" text, "+EMAIL_ADMIN+" text);";
 
-    public static final String TABLE_D = "Ebook";
-    public static final String ID_EBOOK = BaseColumns._ID;
-    public static final String NAME_EBOOK= "Name";
-    public static final String MAJOR_EBOOK = "Majorbook";
-    public String CREATE_EBOOK ="create table "+TABLE_D+" ("+ID_EBOOK+" integer primary key autoincrement, "+NAME_EBOOK+" text, "+MAJOR_EBOOK+" text,"+ID_TEACHER+"integer);";
-/*
-    public static final String TABLE_E = "Statistics";
-    public static final String QTV = BaseColumns._ID;
-    public static final String DATETIME= "dateandtime";
-    public String CREATE_STATISTICS ="create table "+TABLE_E+" ("+QTV+" integer primary key autoincrement, "+ID_EBOOK+" integer, "+ID_STUDENT+" integer,"+DATETIME+"text);";
-*/
+    public static final String TABLE_D = "Lessonbook";
+    public static final String ID_Lesson = "ID_Lesson";
+    public static final String NAME_Lesson= "Name_Lesson";
+    public static final String ID_EBOOK = "ID_Ebook";
+    public static final String FileBook = "FileBook";
+    public String CREATE_EBOOK ="create table "+TABLE_D+" ("+ID_Lesson+" text primary key , "+NAME_Lesson+" text, "+ID_EBOOK+" text,"+FileBook+" text);";
+
 
     public MySQLiteOpenHelper(Context context) {
         super(context, DataBase_Name, null, DataBase_Version);
