@@ -82,9 +82,9 @@ public class register extends AppCompatActivity {
                 objNameValuePairs.add(new BasicNameValuePair("isAdd","true"));
                 objNameValuePairs.add(new BasicNameValuePair("id_student",strid_student));
                 objNameValuePairs.add(new BasicNameValuePair("name_student",strname));
-                objNameValuePairs.add(new BasicNameValuePair("lastname_student",null));
+                objNameValuePairs.add(new BasicNameValuePair("lastname_student",""));
                 objNameValuePairs.add(new BasicNameValuePair("password_student",strpasswordstudent));
-                objNameValuePairs.add(new BasicNameValuePair("email_student",null));
+                objNameValuePairs.add(new BasicNameValuePair("email_student",""));
 
                 HttpClient objHttpClient = new DefaultHttpClient();
                 HttpPost objHttpPost = new HttpPost("http://5711020660038.sci.dusit.ac.th/addregisterjson.php");//ใส่json ดด้วนะ
