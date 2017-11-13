@@ -13,4 +13,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_tabbbb">tabbbb</string>
     <string name="title_activity_tapconten">My E-Book</string>
+    <string name="title_activity_home">home</string>
+    <string name="title_activity_menu">menu</string>
 </resources>

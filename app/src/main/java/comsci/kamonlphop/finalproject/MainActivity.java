@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         try{
             String[] strMyResult = objStudentTABLE.searchUserpassword(usernameString);
             if (passwordString.equals(strMyResult[3])){
-                Intent intent = new Intent(MainActivity.this,MyEbook.class);
+                Intent intent = new Intent(MainActivity.this,home.class);
                 startActivity(intent);
                 //passwordtrue
                 Toast.makeText(getApplicationContext(),"ยินตอนรับเข้าสู้ระบบ",Toast.LENGTH_SHORT).show();

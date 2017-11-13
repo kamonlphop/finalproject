@@ -14,9 +14,9 @@ import android.view.ViewGroup;
  * Created by USER on 14/11/2560.
  */
 
-public class tab1 extends Fragment {
+public class tab2 extends Fragment {
 
-    public tab1() {
+    public tab2() {
 
     }
 
@@ -24,7 +24,7 @@ public class tab1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
 
-        return inflater.inflate(R.layout.tabnetwork,container,false);
+        return inflater.inflate(R.layout.tabdata,container,false);
 
 
     }
