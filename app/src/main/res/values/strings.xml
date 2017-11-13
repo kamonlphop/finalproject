@@ -15,4 +15,5 @@
     <string name="title_activity_tapconten">My E-Book</string>
     <string name="title_activity_home">home</string>
     <string name="title_activity_menu">menu</string>
+    <item name="fab" type="id" />
 </resources>
