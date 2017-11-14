@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TeacherTABLE objTeacherTABLE;
     private AdminTABLE objAdminTABLE;
     private LessonTABLE objLessonTABLE;
+    private Filebook objFilebook ;
 
 
     //public TeacherTABLE objTeacherTABLE;
@@ -44,20 +45,26 @@ public class MainActivity extends AppCompatActivity {
 
         connect();
         synJSONtoSQL();
+
+
+
     }//endactivity
+
+
 
     private void synJSONtoSQL() {
         StrictMode.ThreadPolicy myPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(myPolicy);
 
         int intTimes = 0;
-        while(intTimes <=2){
+        while(intTimes <=4){
             InputStream objInputStream = null;
             String strJSON = null;
              String strstudent =  "http://5711020660038.sci.dusit.ac.th/student.php";
             String strteacher = "http://5711020660038.sci.dusit.ac.th/teacher.php";
             String stradmin = "http://5711020660038.sci.dusit.ac.th/admin.php";
-            String strlesson = "http://5711020660038.sci.dusit.ac.th/admin.php";
+            String strlesson = "http://5711020660038.sci.dusit.ac.th/lesson.php";
+            String strfilebook = "http://5711020660038.sci.dusit.ac.th/filebook.php";
             HttpPost objhttpPost= null;
 
             try {
@@ -72,8 +79,11 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         objhttpPost = new HttpPost(stradmin);
                         break;
-                    default:
+                    case 3 :
                         objhttpPost = new HttpPost(strlesson);
+                        break;
+                    default:
+                        objhttpPost = new HttpPost(strfilebook);
                         break;
 
                 }
@@ -126,12 +136,23 @@ public class MainActivity extends AppCompatActivity {
                             String stremailadmin = jsonObject.getString("email_admin");
                             objAdminTABLE.addadminnewmember(strIDadmin,strnameadmin,strlastnameadmin,strpassadmin,stremailadmin);
                             break;
-                        default:
+                        case 3:
                             String strIDlesson = jsonObject.getString("id_lesson");
                             String strnamelesson = jsonObject.getString("name_lesson");
-                            String strIDEbook = jsonObject.getString("id_ebook");
-                            String strfilelessbook = jsonObject.getString("filebook");
-                            objLessonTABLE.addlessonnewmember(strIDlesson,strnamelesson,strIDEbook,strfilelessbook);
+                            String strIDEbook = jsonObject.getString("id_teacher");
+                            String stridfilelessbook = jsonObject.getString("id_filebook");
+                            String strpicbook = jsonObject.getString("pic_lesson");
+                            String strmajorbook = jsonObject.getString("major_lesson");
+
+
+                            objLessonTABLE.addlessonnewmember(strIDlesson,strnamelesson,strIDEbook,stridfilelessbook,strpicbook,strmajorbook);
+                            break;
+
+                        default:
+                            String stridfilebook = jsonObject.getString("id_filebook");
+                            String strfilebook2 = jsonObject.getString("file_filebook");
+
+                            objFilebook.addfilenewmember(stridfilebook,strfilebook2);
                             break;
                     }
                 }
@@ -203,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
         objTeacherTABLE = new TeacherTABLE(this);
         objAdminTABLE = new AdminTABLE(this);
         objLessonTABLE = new LessonTABLE(this);
+        objFilebook = new Filebook(this);
     }
 
 }//endclass

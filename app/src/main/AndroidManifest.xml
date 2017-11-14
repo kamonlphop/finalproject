@@ -30,7 +30,11 @@
             android:name=".menu"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme" />
-        <activity android:name=".profile"></activity>
+        <activity android:name=".profile" />
+        <activity android:name=".mainmenu" />
+        <activity android:name=".network" />
+        <activity android:name=".database" />
+        <activity android:name=".multi"></activity>
     </application>
 
 </manifest>

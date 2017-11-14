@@ -21,7 +21,7 @@ public class home extends AppCompatActivity {
     }
     public void book1(View view) {
 
-        Intent intent = new Intent(home.this, menu.class);
+        Intent intent = new Intent(home.this, mainmenu.class);
         startActivity(intent);
     }
     public void proflie1(View view) {

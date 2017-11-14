@@ -20,7 +20,7 @@ class MySQLiteOpenHelper extends SQLiteOpenHelper {
     private SQLiteDatabase sqLiteDatabase;
 
 
-    public static final String DataBase_Name = "Ebookcomscitest6.db";
+    public static final String DataBase_Name = "Ebookcomscitest.db";
     public static final int DataBase_Version = 1;
     // student
     public static final String TABLE = "Student";
@@ -47,12 +47,19 @@ class MySQLiteOpenHelper extends SQLiteOpenHelper {
     public static final String EMAIL_ADMIN= "Email_Admin";
     public String CREATE_ADMIN ="create table "+TABLE_C+" ("+ID_ADMIN+" text primary key , "+NAME_ADMIN+" text, "+LASTNAME_ADMIN+" text, "+PASSWOD_ADMIN+" text, "+EMAIL_ADMIN+" text);";
 
-    public static final String TABLE_D = "Lessonbook";
-    public static final String ID_Lesson = "ID_Lesson";
-    public static final String NAME_Lesson= "Name_Lesson";
-    public static final String ID_EBOOK = "ID_Ebook";
-    public static final String FileBook = "FileBook";
-    public String CREATE_EBOOK ="create table "+TABLE_D+" ("+ID_Lesson+" text primary key , "+NAME_Lesson+" text, "+ID_EBOOK+" text,"+FileBook+" text);";
+    public static final String TABLE_D = "Lesson";
+    public static final String ID_Lesson = "id_lesson";
+    public static final String NAME_Lesson= "name_lesson";
+    public static final String ID_teacher = "id_teacher";
+    public static final String ID_FileBook = "id_filebook";
+    public static final String picBook = "pic_lesson";
+    public static final String majorBook = "major_lesson";
+    public String CREATE_LESSON ="create table "+TABLE_D+" ("+ID_Lesson+" text primary key , "+NAME_Lesson+" text, "+ID_teacher+" text, "+ID_FileBook+" text, "+picBook+" text, "+majorBook+" text);";
+
+    public static final String TABLE_E = "Filebook";
+    public static final String id_filebook = "id_filebook";
+    public static final String file_filebook= "file_filebook";
+    public String CREATE_FILEBOOK ="create table "+TABLE_E+" ("+id_filebook+" text primary key , "+file_filebook+" text);";
 
 
     public MySQLiteOpenHelper(Context context) {
@@ -67,14 +74,14 @@ class MySQLiteOpenHelper extends SQLiteOpenHelper {
         Log.i(TAG, CREATE_STUDENT);
         Log.i(TAG, CREATE_TEACHER);
         Log.i(TAG, CREATE_ADMIN);
-        Log.i(TAG, CREATE_EBOOK);
-        //    Log.i(TAG, CREATE_STATISTICS);
+        Log.i(TAG, CREATE_LESSON);
+         Log.i(TAG, CREATE_FILEBOOK);
 
         db.execSQL(CREATE_STUDENT);
         db.execSQL(CREATE_TEACHER);
         db.execSQL(CREATE_ADMIN);
-        db.execSQL(CREATE_EBOOK);
-        //   db.execSQL(CREATE_STATISTICS);
+        db.execSQL(CREATE_LESSON);
+         db.execSQL(CREATE_FILEBOOK);
     }
 
     @Override
